@@ -59,7 +59,7 @@ function updateStats() {
     var columns = document.querySelectorAll("thead th");
 
     columns.forEach(function (column, colIndex) {
-        if (colIndex === 0) return; // Skip the "Roles" header
+        if (colIndex === 0) return;
 
         var columnName = column.textContent.trim();
         var rows = document.querySelectorAll("tbody tr");
@@ -157,7 +157,7 @@ editableCells.forEach(function (cell) {
         availableNames.forEach(function (name) {
             var li = document.createElement("li");
             li.textContent = name;
-            li.style.backgroundColor = nameColors[name]; // Set background color in modal
+            li.style.backgroundColor = nameColors[name];
             modalList.appendChild(li);
 
             li.addEventListener("click", function () {
@@ -199,12 +199,12 @@ compositeEditableCells.forEach(function (cell) {
         availableNames.forEach(function (name) {
             var li = document.createElement("li");
             li.textContent = name;
-            li.style.backgroundColor = nameColors[name]; // Set background color in modal
+            li.style.backgroundColor = nameColors[name];
             modalList.appendChild(li);
 
             li.addEventListener("click", function () {
                 currentCell.textContent = name;
-                currentCell.style.backgroundColor = nameColors[name]; // Set background color
+                currentCell.style.backgroundColor = nameColors[name];
                 currentCell.classList.remove("editable");
                 addDeleteButton(currentCell);
                 modal.style.display = "none";
