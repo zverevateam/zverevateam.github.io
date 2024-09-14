@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастерская Ю. Зверевой</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h3>И мы смеёмся. Составы</h3>
+
+    <button onclick="setCast1()">Состав 1</button>
+    <button onclick="setCast2()">Состав 2</button>
+    <button onclick="clearCast()">Новый</button>
+
+    <br/>
+    <br/>
+
+    <div class="table-wrapper">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th class="fixed-column">Роль</th>
+                    <th>1-4</th>
+                    <th>5-8</th>
+                    <th>9-12</th>
+                    <th>12-финал</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fixed-column">Саша</td>
+                    <td id="td11" class="editable"></td>
+                    <td id="td12" class="editable"></td>
+                    <td id="td13" class="editable"></td>
+                    <td id="td14" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Полицейский</td>
+                    <td id="td21" class="editable"></td>
+                    <td id="td22" class="editable"></td>
+                    <td id="td23" class="editable"></td>
+                    <td id="td24" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Директор</td>
+                    <td id="td31" class="editable"></td>
+                    <td id="td32" class="editable"></td>
+                    <td id="td33" class="editable"></td>
+                    <td id="td34" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Дорогуша</td>
+                    <td id="td41" class="editable"></td>
+                    <td id="td42" class="editable"></td>
+                    <td id="td43" class="editable"></td>
+                    <td id="td44" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Сережа</td>
+                    <td id="td51" class="editable"></td>
+                    <td id="td52" class="editable"></td>
+                    <td id="td53" class="editable"></td>
+                    <td id="td54" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Влад</td>
+                    <td id="td61" class="editable"></td>
+                    <td id="td62" class="editable"></td>
+                    <td id="td63" class="editable"></td>
+                    <td id="td64" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Игорь</td>
+                    <td id="td71" class="editable"></td>
+                    <td id="td72" class="editable"></td>
+                    <td id="td73" class="editable"></td>
+                    <td id="td74" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Катя</td>
+                    <td id="td81" class="editable"></td>
+                    <td id="td82" class="editable"></td>
+                    <td id="td83" class="editable"></td>
+                    <td id="td84" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Наташа</td>
+                    <td id="td91" class="editable"></td>
+                    <td id="td92" class="editable"></td>
+                    <td id="td93" class="editable"></td>
+                    <td id="td94" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Ярослава</td>
+                    <td id="tdx1" class="editable"></td>
+                    <td id="tdx2" class="editable"></td>
+                    <td id="tdx3" class="editable"></td>
+                    <td id="tdx4" class="editable"></td>
+                </tr>
+                <tr>
+                    <td class="fixed-column">Взрослый</td>
+                    <td class="composite-cell">
+                        <div class="header">Соц. сети</div>
+                        <div id="tdy1" class="editable"></div>
+                        <div class="header">Мать</div>
+                        <div id="tdy2" class="editable"></div>
+                    </td>
+                    <td class="composite-cell">
+                        <div class="header">Монашка</div>
+                        <div id="tdz1" class="editable"></div>
+                        <div class="header">Спецназ</div>
+                        <div id="tdz2" class="editable"></div>
+                        <div class="header">Васютин</div>
+                        <div id="tdz3" class="editable"></div>
+                    </td>
+                    <td class="composite-cell">
+                        <div class="header">Клевета</div>
+                        <div id="tdz4" class="editable"></div>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+    <button onclick="downloadImage()">Скачать как картинку</button>
+    <br>
+    <br>
+
+    <div id="stats"></div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <ul class="modal-list">
+                <li>Аня Б</li>
+                <li>Аня М</li>
+                <li>Артём</li>
+                <li>Дима</li>
+                <li>Женя</li>
+                <li>Инна</li>
+                <li>Коля</li>
+                <li>Лёша</li>
+                <li>Марина</li>
+                <li>Надя</li>
+                <li>Полина П</li>
+                <li>Федя</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
